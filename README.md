@@ -1,0 +1,2 @@
+# gopl
+learn gopl :)
