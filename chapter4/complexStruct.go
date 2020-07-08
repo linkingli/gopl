@@ -34,4 +34,30 @@ func GetJson() {
 	fmt.Printf("%s\n",marshal)
 	fmt.Printf("%s\n",bytes)
 	fmt.Printf("%s\n",indent)
+
+	//反序列化
+	//构造解析体
+	type LittleMovie struct {
+		Name string
+	}
+	//构建object
+	var littleMovies []LittleMovie
+	var littleMovie LittleMovie
+	
+	//传入jsonstring，和littleMovie的指针
+	err2 := json.Unmarshal(bytes, &littleMovie)
+	if err2!=nil {
+		fmt.Println("parse json to object error")
+		fmt.Println(err2.Error())
+	}
+	fmt.Println(littleMovie)
+	//传入jsonstrings，和littleMovies的指针
+	err := json.Unmarshal(marshal, &littleMovies)
+	if err !=nil {
+		fmt.Println("parse jsons to objects error")
+	}
+	fmt.Println(littleMovies)
+
+
+
 }
