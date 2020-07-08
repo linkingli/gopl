@@ -1,6 +1,8 @@
 package main
 
-import "gopl/chapter1"
+import (
+	"gopl/chapter3"
+)
 
 func main() {
 
@@ -12,5 +14,8 @@ func main() {
 		chapter1.GetDataByUrl1()
 		chapter1.GetDataByuRL2()
 		chapter1.NewServer()*/
-	chapter1.NewServer2()
+	//chapter1.NewServer2()
+	//util.CreateCronJob()
+	chapter3.UseBaseStruct()
+
 }
