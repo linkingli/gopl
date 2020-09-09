@@ -30,3 +30,12 @@ func UseBaseStruct() {
 	fmt.Println(Monday, Teusday, Wednesday, Thursday, Friday, Saturday, Sunday)
 
 }
+
+func TestType() {
+	var s string
+	s = "das"
+	i, ok := interface{}(s).(string)
+	if ok {
+		fmt.Println(i)
+	}
+}
